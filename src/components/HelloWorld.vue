@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { storeToRefs } from 'pinia'
+import { useCounterStore } from '@stores/useCounterStore.ts'
 
 interface Props {
 	msg: string
@@ -7,15 +8,16 @@ interface Props {
 
 defineProps<Props>()
 
-const count = ref(0)
-const handleButtonClick = () => count.value++
+const counter = useCounterStore()
+const { count } = storeToRefs(counter)
+const { increment } = counter
 </script>
 
 <template>
 	<div class="hello-world">
 		<img width="90" height="auto" class="image" src="@assets/icon.svg" alt="Vue js logo">
 		<h1 class="title">{{ msg }}</h1>
-		<button type="button" class="button" @click="handleButtonClick">
+		<button type="button" class="button" @click="increment">
 			<span>Count: {{ count }}</span>
 		</button>
 	</div>
