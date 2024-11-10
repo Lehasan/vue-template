@@ -1,7 +1,11 @@
 <script setup lang="ts">
-import HelloWorld from '@components/HelloWorld.vue'
+import { RouterView } from 'vue-router'
+import Header from '@components/Header.vue'
 </script>
 
 <template>
-	<HelloWorld msg='Hello World!' />
+	<Header />
+	<main class="main">
+		<RouterView />
+	</main>
 </template>

@@ -2,12 +2,6 @@
 import { storeToRefs } from 'pinia'
 import { useCounterStore } from '@stores/useCounterStore.ts'
 
-interface Props {
-	msg: string
-}
-
-defineProps<Props>()
-
 const counter = useCounterStore()
 const { count } = storeToRefs(counter)
 const { increment } = counter
@@ -16,7 +10,7 @@ const { increment } = counter
 <template>
 	<div class="hello-world">
 		<img width="90" height="auto" class="image" src="@assets/icon.svg" alt="Vue js logo">
-		<h1 class="title">{{ msg }}</h1>
+		<h1 class="title">Hello World!</h1>
 		<button type="button" class="button" @click="increment">
 			<span>Count: {{ count }}</span>
 		</button>
@@ -24,17 +18,12 @@ const { increment } = counter
 </template>
 
 <style scoped lang="scss">
-@mixin gradientText() {
-	background: linear-gradient(to right, var(--color-primary), var(--color-secondary));
-	background-clip: text;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-}
+@use '@styles/mixins.scss' as *;
 
 .hello-world {
 	text-align: center;
 
-	&>*:not(:last-child) {
+	& > *:not(:last-child) {
 		margin-bottom: 30px;
 	}
 }
