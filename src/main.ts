@@ -5,7 +5,7 @@ import { RouteLocationNormalized } from 'vue-router'
 import PrimeVue from 'primevue/config'
 import Aura from '@primevue/themes/aura'
 
-import router from '@/router'
+import router from '@/router.ts'
 import App from '@/App.vue'
 
 import '@styles/style.scss'

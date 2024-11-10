@@ -1,19 +1,7 @@
-@import "primeicons/primeicons.css";
+@use "primeicons/primeicons.css";
 
-:root {
-	--font-size: Arial, "Helvetica Neue", Helvetica, sans-serif;
-	--background-color: #1a1a1a;
-	--color-primary: #42d392;
-	--color-secondary: #647eff;
-}
-
-*,
-*::before,
-*::after {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
+@use "./reset.scss";
+@use "./global-variables.scss";
 
 body {
 	font-family: var(--font-size);
