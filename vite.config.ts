@@ -13,6 +13,8 @@ export default defineConfig({
 			'@stores': path.resolve(__dirname, './src/stores/'),
 			'@routes': path.resolve(__dirname, './src/routes/'),
 			'@utils': path.resolve(__dirname, './src/utils/'),
+			'@hooks': path.resolve(__dirname, './src/hooks/'),
+			'@constants': path.resolve(__dirname, './src/constants/'),
 		}
 	}
 })
