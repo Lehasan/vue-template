@@ -1,3 +1,14 @@
+/**
+ * Example
+ * 
+ * const { storageValue, setStorage } = useLocalStorage('counterKey', 0);
+ *	const counter = ref(storageValue.value);
+ *
+ * const handleButtonClick = () => setStorage(++counter.value);
+ * 
+ * <button @click="handleButtonClick">Count: {{ counter }}</button>
+ */
+
 import { ref } from "vue"
 
 export const useLocalStorage = <T>(storageKey: string = 'storage', defaultValue: T) => {
